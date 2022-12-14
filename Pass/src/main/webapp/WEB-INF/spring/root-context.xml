@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<context:property-placeholder location="classpath:/kh/nt/config/config.properties"/>
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig" >
+		<property name="driverClassName" value="${db.driver}"/>
+		<property name="jdbcUrl" value="${db.url}" />
+		<property name="username" value="${db.username}"/>
+		<property name="password" value="${db.password}"/>
+		<property name="idleTimeout" value="${db.idleTimeout}"/>
+		<property name="maximumPoolSize" value="${db.maximumPoolSize}"/>
+		<property name="minimumIdle" value="${db.minimumIdle}"/>
+		<property name="registerMbeans" value="${db.registerMbeans}"/>
+	</bean>
+	<bean id="data_source" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	    <property name="dataSource" ref="data_source"/>
+	    <property name="mapperLocations" value="classpath*:/kh/nt/mybatis/**/*.xml"/>
+	</bean>
+ 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+ 		<property name="basePackage" value="kh.nt.pass.dao.mapper"/>
+ 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+	</bean>	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="data_source"/>
+	</bean>	
+</beans>
