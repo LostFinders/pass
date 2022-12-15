@@ -17,6 +17,7 @@ import lombok.ToString;
 @RequiredArgsConstructor
 @AllArgsConstructor
 public class ServiceFile {
+	@NonNull
 	private String uuid;
 	private int service_no;
 	@NonNull
