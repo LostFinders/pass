@@ -24,4 +24,5 @@ public class Member {
 	private String zipcode;
 	private String address;
 	private String building;
+	private int level;
 }
