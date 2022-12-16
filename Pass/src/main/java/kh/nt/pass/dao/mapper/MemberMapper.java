@@ -7,8 +7,10 @@ import kh.nt.pass.model.Member;
 @Mapper
 public interface MemberMapper {
 	int idCheck(String id);
+	int passCheck(Member member);
 	int phoneCheck(String phone);
 	int emailCheck(String email);
 	int signupCheck(Member member);
+	int editidCheck(Member member);
 	Member loginCheck(Member member);
 }

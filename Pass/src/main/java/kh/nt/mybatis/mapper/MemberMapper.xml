@@ -4,6 +4,9 @@
 	<select id="idCheck" parameterType="string" resultType="int">
 		select Count(*) from member where id=#{id}
 	</select>
+	<select id="passCheck" parameterType="kh.nt.pass.model.Member" resultType="int">
+		select Count(*) from member where id=#{id} and pass=#{pass}
+	</select>
 	<select id="phoneCheck" parameterType="string" resultType="int">
 		select Count(*) from member where phone=#{phone}
 	</select>
@@ -13,7 +16,10 @@
 	<insert id="signupCheck" parameterType="kh.nt.pass.model.Member">
 		insert into member values(#{id},#{pass},#{phone},#{email},#{zipcode},#{address},#{building},default)
 	</insert>
-		<select id="loginCheck" parameterType="kh.nt.pass.model.Member" resultType="kh.nt.pass.model.Member">
+	<update id="editidCheck" parameterType="kh.nt.pass.model.Member">
+		update member set pass=#{pass},phone=#{phone},email=#{email},zipcode=#{zipcode},address=#{address},building=#{building} where id=#{id}
+	</update>
+	<select id="loginCheck" parameterType="kh.nt.pass.model.Member" resultType="kh.nt.pass.model.Member">
 		select * from member where id=#{id} and pass=#{pass}
 	</select>
 </mapper>

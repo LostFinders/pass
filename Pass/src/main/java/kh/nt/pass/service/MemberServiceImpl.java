@@ -24,6 +24,14 @@ public class MemberServiceImpl implements MemberService{
 			return true;
 		return false;
 	}
+	
+	@Override
+	public boolean passCheck(Member member) {
+		member.setPass(en.SHA256(member.getPass()));
+		if(md.passCheck(member)==1)
+			return true;
+		return false;
+	}
 
 	@Override
 	public boolean phoneCheck(String phone) {
@@ -46,10 +54,21 @@ public class MemberServiceImpl implements MemberService{
 			return true;
 		return false;
 	}
+	
+	@Override
+	public boolean editidCheck(Member member) {
+		member.setPass(en.SHA256(member.getPass()));
+		if(md.editidCheck(member)==1)
+			return true;
+		return false;
+	}
 
 	@Override
 	public Member loginCheck(Member member) {
 		member.setPass(en.SHA256(member.getPass()));
-		return md.loginCheck(member);
+		Member session = md.loginCheck(member);
+		if(session!=null)
+			session.setPass("");
+		return session;
 	}
 }

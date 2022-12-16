@@ -45,10 +45,22 @@ public class MemberController {
 		return "member/mypage";
 	}
 	
+	@RequestMapping(value = "editid")
+	public String toeditedid() {
+		return "member/editid";
+	}
+	
 	@RequestMapping(value = "id_check", method = RequestMethod.POST)
 	@ResponseBody
 	public String idcheck(String id) {
 		return String.valueOf(ms.idCheck(id));
+	}
+	
+	@RequestMapping(value = "pass_check", method = RequestMethod.POST)
+	@ResponseBody
+	public String passcheck(Member member) {
+		member.setId(((Member)hs.getAttribute("signin")).getId());
+		return String.valueOf(ms.passCheck(member));
 	}
 	
 	@RequestMapping(value = "phone_check", method = RequestMethod.POST)
@@ -78,5 +90,17 @@ public class MemberController {
 			return "redirect:/";
 		}
 		return "member/login";
+	}
+	
+	@RequestMapping(value = "editid_check", method = RequestMethod.POST)
+	public String editidcheck(Member member, String changepass) {
+		member.setId(((Member)hs.getAttribute("signin")).getId());
+		if(ms.passCheck(member)) {
+			if(changepass!="")
+				member.setPass(changepass);
+			if(ms.editidCheck(member))
+				return "redirect:/member/mypage";
+		}
+		return "member/editid";
 	}
 }

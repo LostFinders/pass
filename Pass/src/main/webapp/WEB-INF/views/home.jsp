@@ -28,7 +28,7 @@
 		            <ul class="navbar-nav ms-auto">
 		                <li class="nav-item"><a class="nav-link active" href="#"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">개발자 소개</span></a></li>
 		                <li class="nav-item"><a class="nav-link" href="#"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">가전가구 수거 신청</span></a></li>
-		                <li class="nav-item"><a class="nav-link" href="#"><span style="color: rgb(32, 33, 36);">고객센터</span></a></li>
+		                <li class="nav-item"><a class="nav-link" href="/pass/service/board"><span style="color: rgb(32, 33, 36);">고객센터</span></a></li>
 		                <li class="nav-item"><a class="nav-link" href="/pass/member/mypage"><span style="color: rgb(32, 33, 36);">마이페이지</span></a></li>
 		            </ul><c:choose><c:when test="${signin == null}"><a class="btn btn-primary ms-md-2" role="button" href="/pass/member/login">Login</a></c:when><c:otherwise><a class="btn btn-primary ms-md-2" role="button" href="/pass/member/login">Logout</a></c:otherwise></c:choose>
 		        </div>
