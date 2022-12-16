@@ -37,7 +37,7 @@
 	                <ul class="navbar-nav ms-auto">
 	                    <li class="nav-item"><a class="nav-link active" href="#"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">개발자 소개</span></a></li>
 	                    <li class="nav-item"><a class="nav-link" href="#"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">가전가구 수거 신청</span></a></li>
-	                    <li class="nav-item"><a class="nav-link" href="#"><span style="color: rgb(32, 33, 36);">고객센터</span></a></li>
+	                    <li class="nav-item"><a class="nav-link" href="/pass/service/board"><span style="color: rgb(32, 33, 36);">고객센터</span></a></li>
 	                    <li class="nav-item"><a class="nav-link" href="/pass/member/mypage"><span style="color: rgb(32, 33, 36);">마이페이지</span></a></li>
 	                </ul><c:choose><c:when test="${signin == null}"><a class="btn btn-primary ms-md-2" role="button" href="/pass/member/login">Login</a></c:when><c:otherwise><a class="btn btn-primary ms-md-2" role="button" href="/pass/member/login">Logout</a></c:otherwise></c:choose>
 	            </div>
@@ -52,7 +52,7 @@
 	                        </svg></div>
 	                    <div>
 	                        <h4>회원 정보 수정</h4>
-	                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+	                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="editid">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
 	                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
 	                            </svg></a>
 	                    </div>

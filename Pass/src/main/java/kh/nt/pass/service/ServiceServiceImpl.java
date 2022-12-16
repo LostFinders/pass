@@ -1,5 +1,6 @@
 package kh.nt.pass.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class ServiceServiceImpl implements ServiceService{
 	}
 
 	@Override
-	public List<ServiceBoard> listboard(int page) {
+	public HashMap<String, Object> listboard(int page) {
 		// TODO Auto-generated method stub
 		return null;
 	}

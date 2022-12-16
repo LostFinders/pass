@@ -16,6 +16,10 @@ public class MemberDAO {
 		return mm.idCheck(id);
 	}
 	
+	public int passCheck(Member member) {
+		return mm.passCheck(member);
+	}
+	
 	public int phoneCheck(String phone) {
 		return mm.phoneCheck(phone);
 	}
@@ -26,6 +30,10 @@ public class MemberDAO {
 	
 	public int signupCheck(Member member) {
 		return mm.signupCheck(member);
+	}
+	
+	public int editidCheck(Member member) {
+		return mm.editidCheck(member);
 	}
 	
 	public Member loginCheck(Member member) {
