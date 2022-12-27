@@ -36,6 +36,10 @@ public class MemberDAO {
 		return mm.editidCheck(member);
 	}
 	
+	public int idDelete(Member member) {
+		return mm.idDelete(member);
+	}
+	
 	public Member loginCheck(Member member) {
 		return mm.loginCheck(member);
 	}

@@ -46,4 +46,40 @@ public class ServiceServiceImpl implements ServiceService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public HashMap<String, Object> viewboard(int no) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean editboard(ServiceBoard serviceboard) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteboard(int no) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ServiceFile downfile(ServiceFile sf) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean editreply(ServiceReply servicereply) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deletereply(ServiceReply servicereply) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

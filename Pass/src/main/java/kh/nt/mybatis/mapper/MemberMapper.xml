@@ -19,6 +19,9 @@
 	<update id="editidCheck" parameterType="kh.nt.pass.model.Member">
 		update member set pass=#{pass},phone=#{phone},email=#{email},zipcode=#{zipcode},address=#{address},building=#{building} where id=#{id}
 	</update>
+	<delete id="idDelete" parameterType="kh.nt.pass.model.Member">
+		delete from member where id=#{id} and pass=#{pass}
+	</delete>
 	<select id="loginCheck" parameterType="kh.nt.pass.model.Member" resultType="kh.nt.pass.model.Member">
 		select * from member where id=#{id} and pass=#{pass}
 	</select>

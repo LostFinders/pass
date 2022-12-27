@@ -11,7 +11,13 @@ public interface ServiceService {
 	public boolean createboard(ServiceBoard serviceboard);
 	public boolean createboard(ServiceBoard serviceboard, ServiceFile servicefile);
 	public HashMap<String,Object> listboard(int page);
+	public HashMap<String,Object> viewboard(int no);
+	public boolean editboard(ServiceBoard serviceboard);
+	public boolean deleteboard(int no);
+	public ServiceFile downfile(ServiceFile sf);
 	
 	public boolean createreply(ServiceReply servicereply);
 	public List<ServiceReply> listreply(int no);
+	public boolean editreply(ServiceReply servicereply);
+	public boolean deletereply(ServiceReply servicereply);
 }

@@ -1,4 +1,4 @@
-package kh.nt.pass.model;
+ package kh.nt.pass.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,4 +15,5 @@ public class OrderCost {
 	private int no;
 	private String name;
 	private int price;
+	private String necessary;
 }
