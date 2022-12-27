@@ -4,7 +4,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,8 +15,8 @@ import kh.nt.pass.service.MemberServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@SessionAttributes("signin")
 @RequestMapping(value = "/member/")
+@SessionAttributes("signin")
 @Controller
 public class MemberController {
 	
@@ -93,14 +92,25 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value = "editid_check", method = RequestMethod.POST)
-	public String editidcheck(Member member, String changepass) {
+	public String editidcheck(Member member, String changepass, SessionStatus ss) {
 		member.setId(((Member)hs.getAttribute("signin")).getId());
+		String localpass=member.getPass();
 		if(ms.passCheck(member)) {
-			if(changepass!="")
+			member.setPass(localpass);
+			if(changepass!=""&&changepass.length()>=8)
 				member.setPass(changepass);
-			if(ms.editidCheck(member))
+			if(ms.editidCheck(member)) {
+				ss.setComplete();
 				return "redirect:/member/mypage";
+			}
 		}
 		return "member/editid";
+	}
+	
+	@RequestMapping(value = "leave", method = RequestMethod.POST)
+	@ResponseBody
+	public String leave(Member member) {
+		member.setId(((Member)hs.getAttribute("signin")).getId());
+		return String.valueOf(ms.idDelete(member));
 	}
 }

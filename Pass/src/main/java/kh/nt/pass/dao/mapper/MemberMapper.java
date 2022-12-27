@@ -12,5 +12,6 @@ public interface MemberMapper {
 	int emailCheck(String email);
 	int signupCheck(Member member);
 	int editidCheck(Member member);
+	int idDelete(Member member);
 	Member loginCheck(Member member);
 }

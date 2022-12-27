@@ -62,6 +62,14 @@ public class MemberServiceImpl implements MemberService{
 			return true;
 		return false;
 	}
+	
+	@Override
+	public boolean idDelete(Member member) {
+		member.setPass(en.SHA256(member.getPass()));
+		if(md.idDelete(member)==1)
+			return true;
+		return false;
+	}
 
 	@Override
 	public Member loginCheck(Member member) {

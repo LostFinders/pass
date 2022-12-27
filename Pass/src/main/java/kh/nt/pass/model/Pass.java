@@ -25,6 +25,6 @@ public class Pass {
 	private Timestamp create_date;
 	@NonNull
 	private Timestamp request_date;
-	@NonNull
 	private Timestamp processing_date;
+	private String address;
 }

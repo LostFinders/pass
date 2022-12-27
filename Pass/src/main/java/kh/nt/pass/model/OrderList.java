@@ -15,4 +15,5 @@ public class OrderList {
 	private int pass_no;
 	private String id;
 	private int ordercost_no;
+	private int amount;
 }

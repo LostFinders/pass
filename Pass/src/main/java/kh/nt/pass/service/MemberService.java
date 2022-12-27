@@ -9,5 +9,6 @@ public interface MemberService {
 	public boolean emailCheck(String email);
 	public boolean signupCheck(Member member);
 	public boolean editidCheck(Member member);
+	public boolean idDelete(Member member);
 	public Member loginCheck(Member member);
 }
