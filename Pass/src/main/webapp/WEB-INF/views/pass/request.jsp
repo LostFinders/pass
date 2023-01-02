@@ -57,13 +57,8 @@
 		                <div class="card-body">
 		                    <div class="row">
 		                        <div class="col-sm-12 col-md-8 col-lg-8">
-		                            <div class="mb-3"><label class="form-label" for="service_name"><strong>Address(계정에 등록된 장소 이외의 장소 신청 시 입력) *</strong></label><input class="form-control" type="text" id="address" name="address" placeholder="Name service" value="${signin.address} ${signin.building}" name="service_name" required=""></div>
+		                            <div class="mb-3"><label class="form-label" for="service_name"><strong>Address(계정에 등록된 장소 이외의 장소 신청 시 입력) *</strong></label><input class="form-control" type="text" id="address" name="address" placeholder="Name service" value="${signin.address} ${signin.building}" name="service_name" required></div>
 		                        </div>
-		                        <!-- 
-		                        <div class="col-sm-12 col-md-4 col-lg-4">
-		                            <div class="mb-3"><label class="form-label" for="service_price"><strong>Price *</strong><br></label><input class="form-control" type="text" id="service_price" placeholder="$0000" name="client_phone" required=""></div>
-		                        </div>
-		                         -->
 		                    </div>
 		                    <div class="mb-3"><label class="form-label" id="request-btn" for="client_description"><strong>가전가구 수거 목록 (클릭시 검색)*</strong><br></label>
 		                    <table class="table table-striped" id="service_description" name="passlist">

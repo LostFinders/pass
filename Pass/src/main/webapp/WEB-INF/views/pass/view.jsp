@@ -8,19 +8,26 @@
 	    <meta charset="UTF-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	    <title>마이페이지</title>
+	    <title>가전가구 수거 요청</title>
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
 	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	    <link rel="stylesheet" href="/pass/css/Features-Image-icons.css">
-	    <link rel="stylesheet" href="/pass/css/Features-Image-images.css">
 		<link rel="stylesheet" href="/pass/css/Navbar-Right-Links-icons.css">
 	    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+	    <link rel="stylesheet" href="https://djpsoftwarecdn.azureedge.net/availabilitycss-v1/availability.min.css">
+	    <link rel="stylesheet" href="/pass/css/Ludens---1-Index-Table-with-Search--Sort-Filters-v20.css">
 	    <style>
 	        *{
 				font-family: 'Noto Sans KR', sans-serif;
 	            font-size: 18px;
+	        }
+	        .a-none-line{
+	        	text-decoration : none;
+	        	color:black;
 	        }
 	    </style>
 	</head>
@@ -43,73 +50,98 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <div class="container py-4 py-xl-5">
-	        <div class="row">
-	            <div class="col-md-8 col-xl-6 mx-auto p-4">
-	                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-	                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell">
-	                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-	                        </svg></div>
-	                    <div>
-	                        <h4>회원 정보 수정</h4>
-	                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="editid">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-	                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-	                            </svg></a>
-	                    </div>
-	                </div>
-	                <hr class="my-5">
-	                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-	                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell">
-	                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-	                        </svg></div>
-	                    <div>
-	                        <h4>가전가구 수거 신청 확인, 취소</h4>
-	                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="/pass/pass/view?page=1">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-	                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-	                            </svg></a>
-	                    </div>
-	                </div>
-	                <hr class="my-5">
-	                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-	                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell">
-	                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-	                        </svg></div>
-	                    <div>
-	                        <h4>고객센터</h4>
-	                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-	                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-	                            </svg></a>
-	                    </div>
-	                </div>
-	                <hr class="my-5">
-	                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-	                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell">
-	                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-	                        </svg></div>
-	                    <div>
-	                        <h4>회원 탈퇴</h4>
-	                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a id="leave" href="#">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-	                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-	                            </svg></a>
-	                    </div>
-	                </div>
-	                <hr class="my-5">
-	                <c:if test="${signin.level==9}">
-		                <div class="d-flex align-items-center align-items-md-start align-items-xl-center">
-		                    <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell">
-		                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-		                        </svg></div>
-		                    <div>
-		                        <h4>관리자 페이지</h4>
-		                        <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p><a href="/pass/admin/control?pSearch=&mSearch=">Learn More&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
-		                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-		                            </svg></a>
+		    <section class="container-fluid">
+		        <div class="card" id="TableSorterCard">
+		            <div class="card-header py-3">
+		                <div class="row table-topper align-items-center">
+		                    <div class="col-12 col-sm-5 col-md-6 text-start" style="margin: 0px;padding: 5px 15px;">
+		                        <p class="text-primary m-0 fw-bold">가전 가구 수거 신청 목록</p>
+		                    </div>
+		                    <div class="col-12 col-sm-7 col-md-6 text-end" style="margin: 0px;padding: 5px 15px;"></div>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-12">
+		                    <div class="table-responsive">
+		                        <table class="table table-striped table tablesorter" id="ipi-table">
+		                            <thead class="thead-dark">
+		                                <tr>
+		                                    <th class="text-center">신청 번호</th>
+		                                    <th class="text-center">결제 여부</th>
+		                                    <th class="text-center">수거 요청일</th>
+		                                    <th class="text-center">수거 처리일</th>
+		                                    <th class="text-center">상세정보</th>
+		                                    <th class="text-center">신청취소</th>
+		                                </tr>
+		                            </thead>
+		                            <tbody class="text-center">
+		                            	<c:choose>
+		                            		<c:when test="${fn:length(pass.pass) > 0}">
+		                            			<c:forEach var="i" items="${pass.pass}" varStatus="vs" begin="0" step="1" end="${fn:length(pass.pass)}">
+					                                <tr class="trUp_${i.no}">
+					                                    <td>${i.no}</td>
+					                                    <td>
+					                                    	<c:if test="${i.payment_check == 'T'}">
+					                                    		결재 완료
+					                                    	</c:if>
+					                                    	<c:if test="${i.payment_check == 'F'}">
+					                                    		입금 대기
+					                                    	</c:if>
+					                                    	<c:if test="${i.payment_check == 'C'}">
+					                                    		환불 처리
+					                                    	</c:if>					                                    						                                    	
+					                                    </td>
+					                                    <td>${fn:substring(i.request_date,0,10)}</td>
+					                                    <td>
+					                                    	<c:if test="${i.processing_date ne null}">
+					                                    		${fn:substring(i.processing_date,0,10)}
+					                                    	</c:if>
+					                                    	<c:if test="${i.processing_date == null and i.payment_check != 'C'}">
+					                                    		아직 수거되지 않았습니다.
+					                                    	</c:if>
+				                                    		<c:if test="${i.processing_date == null and i.payment_check == 'C'}">
+					                                    		환불처리 되었습니다.
+					                                    	</c:if>						                                    
+					                                    </td>
+					                                    <td class="text-center align-middle" style="max-height: 60px;height: 60px;"><a id="${i.no}" class="viewlist btn btnMaterial btn-flat primary semicircle" role="button" href="#"><i class="far fa-eye"></i></a></td>
+					                                    <td class="text-center filter-false sorter-false"><a id="${i.no}" class="refundlist btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" style="margin-left: 5px;" data-bs-toggle="modal" data-bs-target="#delete-modal" href="#"><i class="fas fa-trash btnNoBorders" style="color: #DC3545;"></i></a></td>
+					                                </tr>
+				                                </c:forEach>
+				                                <tr>
+				                                	<td colspan="6" style="text-align:center">
+				                                		<c:if test="${pass.countPage <= 10}">
+					                                		<a id="left" class="a-none-line" href="#">◀</a>
+					                                		<c:forEach var="i" begin="1" step="1" end="${pass.countPage}">
+					                                			<a id="${i}" class="a-none-line" href="./view?page=${i}">${i}</a>
+					                                		</c:forEach>
+					                                		<a id="right" class="a-none-line" href="#">▶</a>
+				                                		</c:if>
+				                                		<c:if test="${pass.countPage > 10}">
+				                                			<a id="left" class="a-none-line" href="#">◀</a>
+				                                			<a id="1" class="a-none-line" href="./view?page=1">$1</a>
+					                                		<c:forEach var="i" begin="${pass.countPage}-9" step="1" end="${pass.countPage}">
+					                                			<a id="${i}" class="a-none-line" href="./view?page=${i}">${i}</a>
+					                                		</c:forEach>
+					                                		<a id="right" class="a-none-line" href="#">▶</a>
+				                                		</c:if>
+				                                	</td>
+				                                </tr>
+			                                </c:when>
+			                                <c:otherwise>
+			                                <tr>
+			                                	<td colspan="6" rowspan="6" style="text-align:center">
+			                                	주문 하신 내역이 없습니다.
+			                                	</td>
+			                                </tr>
+			                                </c:otherwise>
+		                                </c:choose>
+		                            </tbody>
+		                        </table>
 		                    </div>
 		                </div>
-	                </c:if>
-	            </div>
-	        </div>
-	    </div>
+		            </div>
+		        </div>
+		    </section>
 	    <footer class="text-center">
 	        <div class="container text-muted py-4 py-lg-5">
 	            <ul class="list-inline">
@@ -136,37 +168,55 @@
 	    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script>
-		$("#leave").on("click",function(){
-			swal({
-			  title: "회원 탈퇴",
-			  text: "정말로 회원 탈퇴하시겠습니까?\n탈퇴하면 회원정보가 즉시 삭제되어 복구가 불가능합니다.",
-			  icon: "warning",
-			  content: {
-				    element: "input",
-				    attributes: {
-					      placeholder: "(탈퇴하시려면 로그인 비밀번호를 입력해주세요.)",
-					      type: "password",
-					      name: "value"
-			  		},
-			  },
-			  buttons: true,
-			  dangerMode: true,
+			$(".viewlist").on("click",function(data){
+				window.open('receipt?no='+$(this).attr("id"),'window',"top=400, left=400, width=500, height=600, resizable=no, status=no, toolbar=no, menubar=no");
 			})
-			.then((choice) => {
-				if (choice) {
-					$.post("leave",{"pass":choice},function(data){
-						if(data=="true"){
-					    	swal("감사합니다 안녕히 가십시요.", {icon: "success"});
-					    	    $.post("login");
-								location.reload();
-					    }else if(data=="false")
-							swal("회원 탈퇴 오류 관리자에게 문의 해주세요", {icon: "error"});
+			$("#left").on("click",function(){
+				let pages=window.location.search.substring(6)
+				if(pages<=1)
+					pages=1;
+				else
+					pages--;
+				location.replace("./view?page="+pages)
+			})
+			$("#right").on("click",function(){
+				let pages=window.location.search.substring(6)
+				if(pages>=${pass.countPage})
+					pages=${pass.countPage};
+				else
+					pages++;
+				location.replace("./view?page="+pages)
+			})
+			$(".refundlist").on("click",function(){
+				swal({
+					  title: $(this).attr("id")+"번 주문 취소",
+					  text: "정말로 주문 취소하시겠습니까?",
+					  icon: "warning",
+					  content: {
+						    element: "input",
+						    attributes: {
+							      placeholder: "(취소하시려면 로그인 비밀번호를 입력해주세요.)",
+							      type: "password",
+							      name: "value"
+					  		},
+					  },
+					  buttons: true,
+					  dangerMode: true,
+					})
+					.then((choice) => {
+						if (choice) {
+							$.post("refund",{"pass":choice, "no":$(this).attr("id")},function(data){
+								if(data=="true"){
+							    	swal("요청이 취소되었습니다.", {icon: "success"});
+									location.reload();
+							    }else if(data=="false")
+									swal("주문 취소 오류 관리자에게 문의 해주세요", {icon: "error"});
+							});
+						}else{
+					    	swal("작업이 취소되었습니다.", {icon: "success"});
+					  	}
 					});
-				}else{
-			    	swal("회원 탈퇴가 취소되었습니다.", {icon: "success"});
-			  	}
-			});
-		})
+			})
 		</script>
 	</body>
 </html>

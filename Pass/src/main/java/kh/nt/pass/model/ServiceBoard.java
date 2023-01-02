@@ -22,7 +22,7 @@ public class ServiceBoard {
 	private String title;
 	private String id;
 	@NonNull
-	private String contents;
+	private String content;
 	private Timestamp create_date;
 	private int viewcount; 
 }

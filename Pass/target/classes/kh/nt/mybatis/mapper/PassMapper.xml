@@ -5,7 +5,7 @@
 		select * from ordercost where name like #{name} order by name asc
 	</select>
 	<insert id="insertPass" parameterType="kh.nt.pass.model.Pass">
-		<selectKey keyProperty = "no" resultType="int" order="BEFORE">
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
 			select pass_seq.nextval from dual
 		</selectKey>
 		insert into pass values(#{no},#{id},#{payment_check},default,#{request_date},default,#{address})	
@@ -13,4 +13,22 @@
 	<insert id="insertList" parameterType="kh.nt.pass.model.OrderList">
 		insert into orderlist values(#{pass_no},#{id},#{ordercost_no},#{amount})
 	</insert>
+	<select id="viewPass" parameterType="hashmap" resultType="kh.nt.pass.model.Pass">
+		select no, id, payment_check, create_date, request_date, processing_date, address from (select rownum as rum, no, id, payment_check, create_date, request_date, processing_date, address from (select * from pass where id=#{id} order by no asc)) where (select count(*) from pass where id='totoqqqq')-(10*(#{page}-1)) >= rum and rum > (select count(*) from pass where id='totoqqqq')-(10*#{page}) order by rum desc 
+	</select>
+	<select id="viewList" parameterType="kh.nt.pass.model.Pass" resultType="kh.nt.pass.model.OrderList">
+		select * from orderlist where id=#{id} and pass_no=#{no} order by pass_no
+	</select>
+	<select id="viewCost" parameterType="int" resultType="kh.nt.pass.model.OrderCost">
+		select * from ordercost where no=#{no}
+	</select>
+	<select id="countPage" parameterType="string" resultType="int">
+		select ceil(count(*)/10) from pass where id=#{id}
+	</select>
+	<update id="refundPass" parameterType="kh.nt.pass.model.Pass">
+		update pass set payment_check='C' where no=#{no} and id=#{id}
+	</update>
+	<select id="viewPassList" parameterType="string" resultType="kh.nt.pass.model.Pass">
+		select * from pass where id like #{pSearch} or no like #{pSearch} order by no
+	</select>
 </mapper>

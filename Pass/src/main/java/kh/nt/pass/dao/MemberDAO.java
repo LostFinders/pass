@@ -1,5 +1,7 @@
 package kh.nt.pass.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -42,5 +44,9 @@ public class MemberDAO {
 	
 	public Member loginCheck(Member member) {
 		return mm.loginCheck(member);
+	}
+	
+	public List<Member> viewMember(String mSearch){
+		return mm.viewMembers(mSearch);
 	}
 }

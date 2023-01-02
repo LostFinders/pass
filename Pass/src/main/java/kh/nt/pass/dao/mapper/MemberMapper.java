@@ -1,5 +1,7 @@
 package kh.nt.pass.dao.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import kh.nt.pass.model.Member;
@@ -14,4 +16,5 @@ public interface MemberMapper {
 	int editidCheck(Member member);
 	int idDelete(Member member);
 	Member loginCheck(Member member);
+	List<Member> viewMembers(String mSearch);
 }
