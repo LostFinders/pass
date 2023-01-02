@@ -25,4 +25,7 @@
 	<select id="loginCheck" parameterType="kh.nt.pass.model.Member" resultType="kh.nt.pass.model.Member">
 		select * from member where id=#{id} and pass=#{pass}
 	</select>
+	<select id="viewMembers" parameterType="string" resultType="kh.nt.pass.model.Member">
+		select * from member where id like #{mSearch} or phone like #{mSearch} or email like #{mSearch}
+	</select>
 </mapper>
