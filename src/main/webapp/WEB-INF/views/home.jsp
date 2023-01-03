@@ -55,7 +55,7 @@
 	<body>
 	<!-- body started -->
 	<%@include file ="../views/header.jsp" %><!-- header -->
-
+	
 	<main id="main"><!-- Start main -->
 
 	<!-- ======= Hero Section ======= -->
@@ -105,7 +105,7 @@
 						<p>지금 즉시 아래의 링크를 클릭해서 너무 길어서 여기에는 다 적을수도 없는 품목별 비용 및 필수 폐기물
 							여부를 확인하거나 궁금한 정보를 검색할 수 있습니다.</p>
 						<div class="text-center text-lg-start">
-							<a href="/pass/pass1/request"
+							<a href="/pass/pass/search"
 								class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center nav-none-line">
 								
 								<span>확인하기</span> <i class="bi bi-arrow-right"></i>
@@ -296,7 +296,7 @@
 									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
 									class="bi bi-star-fill"></i>
 							</div>
-							<p>사장님께서 커다란 돌 침대를 혼자서 옮기라고 해서 힘들게 옮기다가 허리가 나갔습니다. 퇴직금 대신 고객이
+							<p>사장님께서 시키셔서 커다란 돌 침대를 혼자서 옮기다가 허리가 나갔습니다. 퇴직금 대신 고객이
 								버린 장수돌침대를 받았는데 굉장히 편하고 좋았어요.</p>
 							<div class="profile mt-auto">
 								<img src="img/testimonials/testimonials-1.jpg"
@@ -315,7 +315,7 @@
 									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
 									class="bi bi-star-fill"></i>
 							</div>
-							<p>사이트 소개라고 해서 들어왔는데 이용후기더라구요, 완전 사기당한거죠. 너무 편리하고 좋았습니다.다음에도
+							<p>사이트 소개라고 해서 들어왔는데 이용후기더라구요, 완전 사기당한거죠. 너무 편리하고 좋습니다.다음에도
 								꼭 이용하고싶네요.</p>
 							<div class="profile mt-auto">
 								<img src="img/testimonials/testimonials-2.jpg"
@@ -353,8 +353,7 @@
 									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
 									class="bi bi-star-fill"></i>
 							</div>
-							<p>별 5개 리뷰만 적어주면 돈을 준다니 대단히 혁신적이네요, 이런 서비스를 이용할 수 있어서 정말
-								다행입니다 언젠가 여러분들도 이런 경험을 꼭 한번 해보시길 바랍니다.</p>
+							<p>별 5개 리뷰만 적어주면 돈을 준다니 대단히 혁신적이네요, 굉장히 만족스러웠습니다. 이런 서비스를 이용할 수 있어서 정말 다행이라고 생각합니다.</p>
 							<div class="profile mt-auto">
 								<img src="img/testimonials/testimonials-4.jpg"
 									class="testimonial-img" alt="">

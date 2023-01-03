@@ -25,6 +25,9 @@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 		  <!-- Template Main CSS File -->
 		  <link href="css/style.css" rel="stylesheet">
 		  
+			<!-- signup css -->
+			<link rel="stylesheet" href="/pass/css/signup.css">
+		  
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
