@@ -20,6 +20,8 @@
 	<resources mapping="/css/**" location="/css/" />
 	<resources mapping="/js/**" location="/js/" />
 	<resources mapping="/img/**" location="/img/" />
+	<resources mapping="/vendor/**" location="/vendor/" />
+	
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -46,6 +48,8 @@
 			<exclude-mapping path="/css/**"/>
 			<exclude-mapping path="/img/**"/>
 			<exclude-mapping path="/js/**"/>
+			<exclude-mapping path="/vendor/**"/>
+			
 			<!-- <exclude-mapping path=""/> -->
 			
 			<beans:ref bean="loginValidator"/>		

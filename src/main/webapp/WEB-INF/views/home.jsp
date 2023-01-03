@@ -105,7 +105,7 @@
 						<p>지금 즉시 아래의 링크를 클릭해서 너무 길어서 여기에는 다 적을수도 없는 품목별 비용 및 필수 폐기물
 							여부를 확인하거나 궁금한 정보를 검색할 수 있습니다.</p>
 						<div class="text-center text-lg-start">
-							<a href="/pass/pass/request"
+							<a href="/pass/pass1/request"
 								class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center nav-none-line">
 								
 								<span>확인하기</span> <i class="bi bi-arrow-right"></i>
@@ -131,8 +131,8 @@
 		<div class="container" data-aos="fade-up">
 
 			<header class="section-header">
-				<h2>PASS만의 장점</h2>
-				<p>수거신청 버튼을 눌렀는데 왜 장점을 소개하는거지?</p>
+				<h2>기능이 어느정도 완성 되는중입니다</h2>
+				<p>일단 로그인 하시고 나서 테스트해보세요.</p>
 			</header>
 
 			<div class="row">
@@ -140,18 +140,17 @@
 				<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
 					<div class="box">
 						<img src="img/values-1.png" class="img-fluid" alt="">
-						<h3>아직 serviceservice가 없어서</h3>
-						<p>수거신청 페이지가 완성이 안 되어있기 때문에 허전해서 임시로 꾸며놓은 상태입니다.</p>
+						<h3>마이페이지와 수거신청을 누르면 놀랍게도</h3>
+						<p>마이페이지와 수거신청 페이지로 이동합니다.</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up"
 					data-aos-delay="400">
 					<div class="box">
-						<img src="img/values-2.png" class="img-fluid" alt="">
-						<h3>그 밖에는?</h3>
-						<p>품목 및 비용안내와 마이페이지,사이트소개를 눌러도 다른 페이지로 이동해야 하지만 아직 페이지 이동이
-							구현되지 않았습니다.</p>
+						<img src="img/values-2.png" class="img-fluid" alt="">	
+						<h3>기쁜 소식</h3>
+						<p>이미지 슬라이더가 깨지는게 해결 된 것 같습니다. 아마도? </p>
 					</div>
 				</div>
 
@@ -159,8 +158,8 @@
 					data-aos-delay="600">
 					<div class="box">
 						<img src="img/values-3.png" class="img-fluid" alt="">
-						<h3>더욱 놀라운 사실.</h3>
-						<p>PASS의 장점이라고 적어놓았지만 놀랍게도 PASS의 장점에 대해 하나도 적혀있지 않습니다.</p>
+						<h3>아쉬운 소식</h3>
+						<p>이제 수거신청 버튼을 누르면 여기로 내려오지 않습니다.</p>
 					</div>
 				</div>
 
@@ -423,9 +422,7 @@
 						<div class="member-info">
 							<h4>서상원</h4>
 							<span>Project Manager</span>
-							<p>Velit aut quia fugit et et. Dolorum ea voluptate vel
-								tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima
-								enim corporis et voluptate.</p>
+							<p>바쁘신 와중에도 노력해주신 조장님 화이팅.</p>
 						</div>
 					</div>
 				</div>
@@ -447,9 +444,7 @@
 						<div class="member-info">
 							<h4>고동현</h4>
 							<span>Project Assistant</span>
-							<p>Quo esse repellendus quia id. Est eum et accusantium
-								pariatur fugit nihil minima suscipit corporis. Voluptate sed
-								quas reiciendis animi neque sapiente.</p>
+							<p>취업 미리 축하드립니다!.</p>
 						</div>
 					</div>
 				</div>
@@ -471,9 +466,7 @@
 						<div class="member-info">
 							<h4>김건우</h4>
 							<span>Project Leader</span>
-							<p>Vero omnis enim consequatur. Voluptas consectetur unde qui
-								molestiae deserunt. Voluptates enim aut architecto porro
-								aspernatur molestiae modi.</p>
+							<p>프로젝트 완성의 주역 건우씨 정말 고생 많으셨습니다.</p>
 						</div>
 					</div>
 				</div>
@@ -495,9 +488,7 @@
 						<div class="member-info">
 							<h4>이정우</h4>
 							<span>Project Assistant</span>
-							<p>Rerum voluptate non adipisci animi distinctio et deserunt
-								amet voluptas. Quia aut aliquid doloremque ut possimus ipsum
-								officia.</p>
+							<p>입니다.</p>
 						</div>
 					</div>
 				</div>

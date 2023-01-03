@@ -6,7 +6,7 @@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
-
+			<!-- 여기가 아닙니다 경로 PASS가 없는곳을 찾아가세요 -->
 			<!-- Favicons -->
 			<link href="img/favicon.png" rel="icon">
 			<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -66,9 +66,9 @@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="#hero">마이페이지</a></li>
+          <li><a class="nav-link scrollto" href="/pass/member/mypage">마이페이지</a></li>
           <li><a class="nav-link scrollto" href="#about">품목 및 비용 안내</a></li>
-          <li><a class="nav-link scrollto" href="#values">수거신청</a></li>
+          <li><a class="nav-link scrollto" href="/pass/pass/request">수거신청</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">사이트 소개</a></li>
           <li><a class="nav-link scrollto" href="#team">개발자 소개</a></li>
           <li><a class="nav-none-line" href="/pass/service/board">고객센터</a></li>

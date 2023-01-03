@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
-	<head>
+	<head><!-- 여기를 바꿔도 홈페이지 ui가 변경되지않습니다 src/main/webapp/WEB-INF/views/home.jsp를 찾아서 바꿔주세요 -->
 	    <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -11,7 +11,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <link href="img/favicon.png" rel="icon"><!-- 여기서 코드를 수정해도 헛수고입니다 -->
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -140,18 +140,17 @@
 				<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
 					<div class="box">
 						<img src="img/values-1.png" class="img-fluid" alt="">
-						<h3>아직 serviceservice가 없어서</h3>
-						<p>수거신청 페이지가 완성이 안 되어있기 때문에 허전해서 임시로 꾸며놓은 상태입니다.</p>
+						<h3>이제 수거 신청을 하러 갈 수 있을지도 모릅니다</h3>
+						<p>일단 로그인 하시고 나서 테스트해보세요.</p>
 					</div>
 				</div>
 
 				<div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up"
 					data-aos-delay="400">
 					<div class="box">
-						<img src="img/values-2.png" class="img-fluid" alt="">
-						<h3>그 밖에는?</h3>
-						<p>품목 및 비용안내와 마이페이지,사이트소개를 눌러도 다른 페이지로 이동해야 하지만 아직 페이지 이동이
-							구현되지 않았습니다.</p>
+						<img src="img/values-2.png" class="img-fluid" alt="">	
+						<h3>어쨰서?</h3>
+						<p>front에서 사진 슬라이더가 깨지는걸 해결한줄 알았는데 다시 문제가 생겼습니다 </p>
 					</div>
 				</div>
 

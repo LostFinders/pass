@@ -46,6 +46,9 @@
 			<exclude-mapping path="/css/**"/>
 			<exclude-mapping path="/img/**"/>
 			<exclude-mapping path="/js/**"/>
+			<exclude-mapping path="/resources/vendor/**/**"/><!-- 임시 권한 -->
+			<exclude-mapping path="/vendor/**/**"/><!-- 임시 권한 -->
+			<exclude-mapping path="/pass/vendor/**/**"/><!-- 임시 권한 -->
 			<!-- <exclude-mapping path=""/> -->
 			
 			<beans:ref bean="loginValidator"/>		
