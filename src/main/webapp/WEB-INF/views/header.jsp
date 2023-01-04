@@ -15,15 +15,15 @@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 		
 			<!-- Vendor CSS Files -->
-			<link href="vendor/aos/aos.css" rel="stylesheet">
-			<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-			<link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-			<link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-			<link href="vendor/remixicon/remixicon.css" rel="stylesheet">
-			<link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+			<link href="/pass/vendor/aos/aos.css" rel="stylesheet"><!-- 이 상태면 member나  pass폴더안의 jsp는 안 깨지지만 home에서 깨짐 -->
+			<link href="/pass/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<link href="/pass/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+			<link href="/pass/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+			<link href="/pass/vendor/remixicon/remixicon.css" rel="stylesheet">
+			<link href="/pass/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 		
 		  <!-- Template Main CSS File -->
-		  <link href="css/style.css" rel="stylesheet">
+		  <link href="/pass/css/style.css" rel="stylesheet">
 		  
 			<!-- signup css -->
 			<link rel="stylesheet" href="/pass/css/signup.css">
@@ -74,7 +74,7 @@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
           <li><a class="nav-link scrollto" href="/pass/pass/request">수거신청</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">사이트 소개</a></li>
           <li><a class="nav-link scrollto" href="#team">개발자 소개</a></li>
-          <li><a class="nav-none-line" href="/pass/service/board">고객센터</a></li>
+          <li><a class="nav-none-line" href="/pass/service/board?page=1">고객센터</a></li>
 
          <!--   <li><a class="nav-none-line" href="/pass/member/login">로그인</a></li> -->
         </ul><c:choose><c:when test="${signin == null}"><a class="btn ms-md-2" role="button" href="/pass/member/login">로그인</a></c:when><c:otherwise><a class="btn ms-md-2" role="button" href="/pass/member/login">로그아웃</a></c:otherwise></c:choose>

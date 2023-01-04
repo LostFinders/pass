@@ -24,5 +24,6 @@ public class ServiceBoard {
 	@NonNull
 	private String content;
 	private Timestamp create_date;
-	private int viewcount; 
+	private int viewcount;
+	
 }

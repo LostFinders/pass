@@ -19,9 +19,6 @@ import lombok.extern.slf4j.Slf4j;
 public class PassServiceImpl implements PassService{
 	@Autowired
 	private PassDAO pd;
-	
-	@Autowired
-	private MemberServiceImpl ms;
 
 	@Override
 	public List<OrderCost> searchCost(OrderCost oc) {
@@ -50,33 +47,20 @@ public class PassServiceImpl implements PassService{
 	}
 
 	@Override
-	public HashMap<String,Object> viewPass(String id, int page) {
-		HashMap<String, String> hm=new HashMap<String, String>();
-		HashMap<String, Object> vp=new HashMap<String, Object>();
-		hm.put("id", id);
-		hm.put("page",String.valueOf(page));
-		vp.put("pass", pd.viewPass(hm));
-		vp.put("countPage", pd.countPage(id));
-		return vp;
+	public HashMap<String, Object> viewPass(String id, int page) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	
+
 	@Override
-	public HashMap<String, Object> viewList(Pass pass){
-		HashMap<String, Object> vl=new HashMap<String, Object>();
-		List<OrderCost> oc=new ArrayList<OrderCost>();
-		List<OrderList> ol=pd.viewList(pass);
-		vl.put("list", ol);
-		for(OrderList o:ol)
-			oc.add(pd.viewCost(o.getOrdercost_no()));
-		vl.put("cost", oc);
-		return vl;
+	public HashMap<String, Object> viewList(Pass pass) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public boolean refundPass(Pass pass, Member member) {
-		if(ms.passCheck(member))
-			if(pd.refundPass(pass)==1)
-				return true;
+		// TODO Auto-generated method stub
 		return false;
 	}
 }

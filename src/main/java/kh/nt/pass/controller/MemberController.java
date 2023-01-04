@@ -113,4 +113,6 @@ public class MemberController {
 		member.setId(((Member)hs.getAttribute("signin")).getId());
 		return String.valueOf(ms.idDelete(member));
 	}
+	
+	
 }
