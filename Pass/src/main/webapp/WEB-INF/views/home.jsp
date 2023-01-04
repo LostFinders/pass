@@ -1,108 +1,581 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-
 <html>
-	<head>
+	<head><!-- 여기를 바꿔도 홈페이지 ui가 변경되지않습니다 src/main/webapp/WEB-INF/views/home.jsp를 찾아서 바꿔주세요 -->
 	    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PASS - Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon"><!-- 여기서 코드를 수정해도 헛수고입니다 -->
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	    <title>Pass</title>
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <title>Home</title>
+	    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
 	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	    
 	    <link rel="stylesheet" href="css/Articles-Cards-images.css">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 	    <link rel="stylesheet" href="css/Navbar-Right-Links-icons.css">
 	    <link rel="stylesheet" href="css/Simple-Slider-Simple-Slider.css">
+	    
+	    <Style>
+	        *{	font-family: 'Noto Sans KR', sans-serif;
+	            font-size: 18px; }
+
+			
+	    </Style>
+	    
 	</head>
 	<body>
-		<nav class="navbar navbar-light navbar-expand-md py-3">
-		    <div class="container"><a class="navbar-brand d-flex align-items-center" href="/pass"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
-		                    <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
-		                    <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-		                </svg><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
-		                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
-		                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-		                    </svg></span></span><span>PASS</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-		        <div class="collapse navbar-collapse" id="navcol-2">
-		            <ul class="navbar-nav ms-auto">
-		                <li class="nav-item"><a class="nav-link active" href="#"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">개발자 소개</span></a></li>
-		                <li class="nav-item"><a class="nav-link" href="/pass/pass/request"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">가전가구 수거 신청</span></a></li>
-		                <li class="nav-item"><a class="nav-link" href="/pass/service/board"><span style="color: rgb(32, 33, 36);">고객센터</span></a></li>
-		                <li class="nav-item"><a class="nav-link" href="/pass/member/mypage"><span style="color: rgb(32, 33, 36);">마이페이지</span></a></li>
-		            </ul><c:choose><c:when test="${signin == null}"><a class="btn btn-primary ms-md-2" role="button" href="/pass/member/login">Login</a></c:when><c:otherwise><a class="btn btn-primary ms-md-2" role="button" href="/pass/member/login">Logout</a></c:otherwise></c:choose>
-		        </div>
-		    </div>
-		</nav>
-	   <div class="simple-slider">
-	       <div class="swiper-container">
-	           <div class="swiper-wrapper">
-	               <div class="swiper-slide" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;"><!-- <img src="img/nature_wallpaper_HD24.jpg"> --></div>
-	               <div class="swiper-slide" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;"></div>
-	               <div class="swiper-slide" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;) center center / cover no-repeat;"></div>
-	           </div>
-	           <div class="swiper-pagination"></div>
-	           <div class="swiper-button-prev"></div>
-	           <div class="swiper-button-next"></div>
-	       </div>
-	   </div>
-	   <div class="container py-4 py-xl-5">
-	       <div class="row mb-5">
-	           <div class="col-md-8 col-xl-6 text-center mx-auto">
-	               <h2><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">가전가구 수거 사이트입니다.</span></h2>
-	               <p class="w-lg-50"><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">폐 가전가구 무상수거 이제는 쉽게 배출하세요.</span></p>
-	           </div>
-	       </div>
-	       <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-	           <div class="col">
-	               <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-	                   <div class="card-body p-4">
-	                       <h4 class="card-title">대형 폐기물 예약배출 신청</h4>
-	                       <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-	                   </div>
-	               </div>
-	           </div>
-	           <div class="col">
-	               <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-	                   <div class="card-body p-4">
-	                       <h4 class="card-title">대형 폐기물 정기배출 신청</h4>
-	                       <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-	                   </div>
-	               </div>
-	           </div>
-	           <div class="col">
-	               <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-	                   <div class="card-body p-4">
-	                       <h4 class="card-title">나의 신청내역</h4>
-	                       <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-	                   </div>
-	               </div>
-	           </div>
-	       </div>
-	   </div>
-	   <footer class="text-center">
-	       <div class="container text-muted py-4 py-lg-5">
-	           <ul class="list-inline">
-	               <li class="list-inline-item me-4"><a class="link-secondary" href="#"><br><br><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">Site Terms of Use</span><br></a></li>
-	               <li class="list-inline-item me-4"><a class="link-secondary" href="#"><br><br><span style="color: rgb(32, 33, 36); background-color: rgb(248, 249, 250);">Developer introduction</span><br></a></li>
-	                <li class="list-inline-item"><a class="link-secondary" href="#">Spec</a></li>
-	            </ul>
-	            <ul class="list-inline">
-	                <li class="list-inline-item me-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
-	                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-	                    </svg></li>
-	                <li class="list-inline-item me-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter">
-	                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-	                    </svg></li>
-	                <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram">
-	                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
-	                    </svg></li>
-	            </ul>
-	            <p class="mb-0">Copyright © 2022 KH Team - Two out of Nine(Web Hosting User K.G.W)</p>
-	        </div>
-	    </footer>
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-	    <script src="js/Simple-Slider.js"></script>
+	<!-- body started -->
+	<%@include file ="../views/header.jsp" %><!-- header -->
+
+	<main id="main"><!-- Start main -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero" class="hero d-flex align-items-center">
+
+	<div class="container">
+			<div class="row">
+				<div class="col-lg-6 d-flex flex-column justify-content-center">
+					<h1 data-aos="fade-up">PASS</h1>
+					<h3 data-aos="fade-up">
+						P erceptive<br>A ppliances–disposal<br>S upervise<br>S
+						ervice
+					</h3>
+					<h4 data-aos="fade-up" data-aos-delay="400">
+						<br> <strong></h>폐기물 분리배출 이제는 현금결제 없이 카드로</strong>
+					</h4>
+					<div data-aos="fade-up" data-aos-delay="600">
+						<div class="text-center text-lg-start">
+							<a href="#about"
+								class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center nav-none-line">
+								<span>PASS란?</span> <i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 hero-img" data-aos="zoom-out"
+					data-aos-delay="200">
+					<img src="img/hero-img.png" class="img-fluid" alt="">
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- End Hero -->
+
+	<!-- ======= About Section ======= -->
+	<section id="about" class="about">
+
+		<div class="container" data-aos="fade-up">
+			<div class="row gx-0">
+
+				<div class="col-lg-6 d-flex flex-column justify-content-center"
+					data-aos="fade-up" data-aos-delay="200">
+					<div class="content">
+						<h3>품목 및 비용 안내</h3>
+						<h2>300종 이상의 대형가전, 가구, 소형 폐기물들의 배출 비용과 배출 가능 여부를 알아보세요.</h2>
+						<p>지금 즉시 아래의 링크를 클릭해서 너무 길어서 여기에는 다 적을수도 없는 품목별 비용 및 필수 폐기물
+							여부를 확인하거나 궁금한 정보를 검색할 수 있습니다.</p>
+						<div class="text-center text-lg-start">
+							<a href="/pass/pass1/request"
+								class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center nav-none-line">
+								
+								<span>확인하기</span> <i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out"
+					data-aos-delay="200">
+					<img src="img/about.jpg" class="img-fluid" alt="">
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+	<!-- End About Section -->
+
+	<!-- ======= Values Section ======= -->
+	<section id="values" class="values">
+
+		<div class="container" data-aos="fade-up">
+
+			<header class="section-header">
+				<h2>PASS만의 장점</h2>
+				<p>수거신청 버튼을 눌렀는데 왜 장점을 소개하는거지?</p>
+			</header>
+
+			<div class="row">
+
+				<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="box">
+						<img src="img/values-1.png" class="img-fluid" alt="">
+						<h3>이제 수거 신청을 하러 갈 수 있을지도 모릅니다</h3>
+						<p>일단 로그인 하시고 나서 테스트해보세요.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up"
+					data-aos-delay="400">
+					<div class="box">
+						<img src="img/values-2.png" class="img-fluid" alt="">	
+						<h3>어쨰서?</h3>
+						<p>front에서 사진 슬라이더가 깨지는걸 해결한줄 알았는데 다시 문제가 생겼습니다 </p>
+					</div>
+				</div>
+
+				<div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up"
+					data-aos-delay="600">
+					<div class="box">
+						<img src="img/values-3.png" class="img-fluid" alt="">
+						<h3>더욱 놀라운 사실.</h3>
+						<p>PASS의 장점이라고 적어놓았지만 놀랍게도 PASS의 장점에 대해 하나도 적혀있지 않습니다.</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- End Values Section -->
+
+	<!-- ======= Q&A Section ======= -->
+	<section id="qna" class="qna">
+
+		<div class="container" data-aos="fade-up">
+
+			<header class="section-header">
+				<h2>Q&A</h2>
+				<p>자주 묻는 질문</p>
+			</header>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<!-- Q&A List 1-->
+					<div class="accordion accordion-flush" id="qnalist1">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button"
+									data-bs-toggle="collapse" data-bs-target="#qna-content-1">
+									결제 후에 버릴 물건을 어디에 내놓으면 되나요?</button>
+							</h2>
+							<div id="qna-content-1" class="accordion-collapse collapse"
+								data-bs-parent="#qnalist1">
+								<div class="accordion-body">지역별로 가장 가까운 수거지점에 내놓으시면 2일 이내로
+									처리 가능합니다</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button"
+									data-bs-toggle="collapse" data-bs-target="#qna-content-2">
+									길이는 가로,세로,높이 중에서 어느걸 기준으로 하나요?</button>
+							</h2>
+							<div id="qna-content-2" class="accordion-collapse collapse"
+								data-bs-parent="#qnalist1">
+								<div class="accordion-body">가장 긴 면을 기준으로 합니다</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button"
+									data-bs-toggle="collapse" data-bs-target="#qna-content-3">
+									미성년자가 성인용품을 버려도 되나요?</button>
+							</h2>
+							<div id="qna-content-3" class="accordion-collapse collapse"
+								data-bs-parent="#qnalist1">
+								<div class="accordion-body">아마도?</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+
+					<!-- F.A.Q List 2-->
+					<div class="accordion accordion-flush" id="qnalist2">
+
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button"
+									data-bs-toggle="collapse" data-bs-target="#qna2-content-1">
+									체크카드도 되나요?</button>
+							</h2>
+							<div id="qna2-content-1" class="accordion-collapse collapse"
+								data-bs-parent="#faqlist2">
+								<div class="accordion-body">넹</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button"
+									data-bs-toggle="collapse" data-bs-target="#qna2-content-2">
+									외국인도 이용 가능한가요?
+							</h2>
+							<div id="qna2-content-2" class="accordion-collapse collapse"
+								data-bs-parent="#qnalist2">
+								<div class="accordion-body">yeah</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button"
+									data-bs-toggle="collapse" data-bs-target="#qna2-content-3">
+									외상도 되나요?</button>
+							</h2>
+							<div id="qna2-content-3" class="accordion-collapse collapse"
+								data-bs-parent="#qnalist2">
+								<div class="accordion-body">ㄴㄴ</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- End Q&A Section -->
+
+	<!-- ======= Testimonials Section ======= -->
+	<section id="testimonials" class="testimonials">
+
+		<div class="container" data-aos="fade-up">
+
+			<header class="section-header">
+				<h2>이용후기</h2>
+				<p>PASS 사용자 분들의 생생한 후기</p>
+			</header>
+
+			<div class="testimonials-slider swiper" data-aos="fade-up"
+				data-aos-delay="200">
+				<div class="swiper-wrapper sw1">
+
+					<div class="swiper-slide">
+						<div class="testimonial-item">
+							<div class="stars">
+								<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i>
+							</div>
+							<p>사장님께서 커다란 돌 침대를 혼자서 옮기라고 해서 힘들게 옮기다가 허리가 나갔습니다. 퇴직금 대신 고객이
+								버린 장수돌침대를 받았는데 굉장히 편하고 좋았어요.</p>
+							<div class="profile mt-auto">
+								<img src="img/testimonials/testimonials-1.jpg"
+									class="testimonial-img" alt="">
+								<h3>곽두철</h3>
+								<h4>온라인 가전가구 분리배출 회사 직원</h4>
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+
+					<div class="swiper-slide">
+						<div class="testimonial-item">
+							<div class="stars">
+								<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i>
+							</div>
+							<p>사이트 소개라고 해서 들어왔는데 이용후기더라구요, 완전 사기당한거죠. 너무 편리하고 좋았습니다.다음에도
+								꼭 이용하고싶네요.</p>
+							<div class="profile mt-auto">
+								<img src="img/testimonials/testimonials-2.jpg"
+									class="testimonial-img" alt="">
+								<h3>사라 윌슨</h3>
+								<h4>디자이너</h4>
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+
+					<div class="swiper-slide">
+						<div class="testimonial-item">
+							<div class="stars">
+								<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i>
+							</div>
+							<p>저는 다른 사이트의 리뷰를 작성하지 않습니다.만약 제 이름이 사용된 리뷰가 있다면 아마 사칭이거나 해킹된
+								계정일겁니다.</p>
+							<div class="profile mt-auto">
+								<img src="img/testimonials/testimonials-3.jpg"
+									class="testimonial-img" alt="">
+								<h3>레이첼 노바</h3>
+								<h4>경영컨설턴트</h4>
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+
+					<div class="swiper-slide">
+						<div class="testimonial-item">
+							<div class="stars">
+								<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i>
+							</div>
+							<p>별 5개 리뷰만 적어주면 돈을 준다니 대단히 혁신적이네요, 이런 서비스를 이용할 수 있어서 정말
+								다행입니다 언젠가 여러분들도 이런 경험을 꼭 한번 해보시길 바랍니다.</p>
+							<div class="profile mt-auto">
+								<img src="img/testimonials/testimonials-4.jpg"
+									class="testimonial-img" alt="">
+								<h3>매튜 브랜든</h3>
+								<h4>무직</h4>
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+
+					<div class="swiper-slide">
+						<div class="testimonial-item">
+							<div class="stars">
+								<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+									class="bi bi-star-fill"></i>
+							</div>
+							<p>이번달에 버려진 장수돌침대입니다. 직원분들이 기스가 나지 않게 신경써서 옮겨주시고 사장님도 친절하세요.
+							</p>
+							<div class="profile mt-auto">
+								<img src="img/testimonials/testimonials-5.jpg"
+									class="testimonial-img" alt="">
+								<h3>장수돌침대</h3>
+								<h4>침대</h4>
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+		</div>
+
+	</section>
+	<!-- End Testimonials Section -->
+
+	<!-- ======= Team Section ======= -->
+	<section id="team" class="team">
+
+		<div class="container" data-aos="fade-up">
+
+			<header class="section-header">
+				<h2>개발자 소개</h2>
+				<p>9회말 2아웃 팀 프로젝트 팀원 소개</p>
+			</header>
+
+			<div class="row gy-4">
+
+				<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+					data-aos="fade-up" data-aos-delay="100">
+					<div class="member">
+						<div class="member-img">
+							<img src="img/team/team-1.png" class="img-fluid" alt="">
+							<div class="social">
+								<a href="https://twitter.com/i/flow/login"><i
+									class="bi bi-twitter"></i></a><a
+									href="https://m.facebook.com/login/?locale=ko_KR"><i
+									class="bi bi-facebook"></i></a><a href="https://www.instagram.com/"><i
+									class="bi bi-instagram"></i></a><a href="https://kr.linkedin.com/"><i
+									class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>서상원</h4>
+							<span>Project Manager</span>
+							<p>Velit aut quia fugit et et. Dolorum ea voluptate vel
+								tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima
+								enim corporis et voluptate.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+					data-aos="fade-up" data-aos-delay="200">
+					<div class="member">
+						<div class="member-img">
+							<img src="img/team/team-2.png" class="img-fluid" alt="">
+							<div class="social">
+								<a href="https://twitter.com/i/flow/login"><i
+									class="bi bi-twitter"></i></a><a
+									href="https://m.facebook.com/login/?locale=ko_KR"><i
+									class="bi bi-facebook"></i></a><a href="https://www.instagram.com/"><i
+									class="bi bi-instagram"></i></a><a href="https://kr.linkedin.com/"><i
+									class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>고동현</h4>
+							<span>Project Assistant</span>
+							<p>Quo esse repellendus quia id. Est eum et accusantium
+								pariatur fugit nihil minima suscipit corporis. Voluptate sed
+								quas reiciendis animi neque sapiente.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+					data-aos="fade-up" data-aos-delay="300">
+					<div class="member">
+						<div class="member-img">
+							<img src="img/team/team-3.png" class="img-fluid" alt="">
+							<div class="social">
+								<a href="https://twitter.com/i/flow/login"><i
+									class="bi bi-twitter"></i></a><a
+									href="https://m.facebook.com/login/?locale=ko_KR"><i
+									class="bi bi-facebook"></i></a><a href="https://www.instagram.com/"><i
+									class="bi bi-instagram"></i></a><a href="https://kr.linkedin.com/"><i
+									class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>김건우</h4>
+							<span>Project Leader</span>
+							<p>Vero omnis enim consequatur. Voluptas consectetur unde qui
+								molestiae deserunt. Voluptates enim aut architecto porro
+								aspernatur molestiae modi.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 d-flex align-items-stretch"
+					data-aos="fade-up" data-aos-delay="400">
+					<div class="member">
+						<div class="member-img">
+							<img src="img/team/team-4.png" class="img-fluid" alt="">
+							<div class="social">
+								<a href="https://twitter.com/i/flow/login"><i
+									class="bi bi-twitter"></i></a><a
+									href="https://m.facebook.com/login/?locale=ko_KR"><i
+									class="bi bi-facebook"></i></a><a href="https://www.instagram.com/"><i
+									class="bi bi-instagram"></i></a><a href="https://kr.linkedin.com/"><i
+									class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+						<div class="member-info">
+							<h4>이정우</h4>
+							<span>Project Assistant</span>
+							<p>Rerum voluptate non adipisci animi distinctio et deserunt
+								amet voluptas. Quia aut aliquid doloremque ut possimus ipsum
+								officia.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- End Team Section -->
+
+	<!-- ======= Clients Section ======= -->
+	<section id="clients" class="clients">
+
+		<div class="container" data-aos="fade-up">
+
+			<header class="section-header">
+				<h2>기술스택</h2>
+				<p>웹사이트 제작에 사용된 기술스택과 툴</p>
+			</header>
+
+			<div class="clients-slider swiper">
+				<div class="swiper-wrapper sw2 align-items-center">
+					<div class="swiper-slide">
+						<img src="img/clients/clients-1.png" class="img-fluid"
+							alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/clients/clients-2.png" class="img-fluid"
+							alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/clients/clients-3.png" class="img-fluid"
+							alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/clients/clients-4.png" class="img-fluid"
+							alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/clients/clients-5.png" class="img-fluid"
+							alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/clients/clients-6.png" class="img-fluid"
+							alt="">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+	</section>
+	<!-- End clients Section -->
+
+	</main>
+
+	<!-- End #main -->
+
+	<!-- body finished -->
+	
+	<%@include file ="../views/footer.jsp" %><!-- footer -->
 	</body>
+
+	<!-- Vendor JS Files -->
+	<script src="vendor/purecounter/purecounter_vanilla.js"></script>
+	<script src="vendor/aos/aos.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="vendor/swiper/swiper-bundle.min.js"></script>
+	<script src="vendor/php-email-form/validate.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="js/main.js"></script>
+
+	<!-- original JS File-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+	<script src="js/Simple-Slider.js"></script>
+
 </html>

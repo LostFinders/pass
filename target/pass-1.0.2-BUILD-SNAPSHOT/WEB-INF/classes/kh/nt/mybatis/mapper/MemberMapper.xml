@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kh.nt.pass.dao.mapper.MemberMapper">
+	<select id="idCheck" parameterType="string" resultType="int">
+		select Count(*) from member where id=#{id}
+	</select>
+	<select id="passCheck" parameterType="kh.nt.pass.model.Member" resultType="int">
+		select Count(*) from member where id=#{id} and pass=#{pass}
+	</select>
+	<select id="phoneCheck" parameterType="string" resultType="int">
+		select Count(*) from member where phone=#{phone}
+	</select>
+	<select id="emailCheck" parameterType="string" resultType="int">
+		select Count(*) from member where email=#{email}
+	</select>
+	<insert id="signupCheck" parameterType="kh.nt.pass.model.Member">
+		insert into member values(#{id},#{pass},#{phone},#{email},#{zipcode},#{address},#{building},default)
+	</insert>
+	<update id="editidCheck" parameterType="kh.nt.pass.model.Member">
+		update member set pass=#{pass},phone=#{phone},email=#{email},zipcode=#{zipcode},address=#{address},building=#{building} where id=#{id}
+	</update>
+	<delete id="idDelete" parameterType="kh.nt.pass.model.Member">
+		delete from member where id=#{id} and pass=#{pass}
+	</delete>
+	<select id="loginCheck" parameterType="kh.nt.pass.model.Member" resultType="kh.nt.pass.model.Member">
+		select * from member where id=#{id} and pass=#{pass}
+	</select>
+</mapper>
