@@ -1,5 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kh.nt.pass.dao.mapper.ServiceMapper">
-
+	<insert id="createboard" parameterType="kh.nt.pass.model.ServiceBoard">
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			select serviceboard_no.nextval from dual
+		</selectKey>
+		insert into serviceboard values(#{no},#{title},#{id},#{content},default,default)
+	</insert>
+	<insert id="createfile" parameterType="kh.nt.pass.model.ServiceFile">
+		insert into servicefile values(#{uuid},#{service_no},#{id},#{name},default)
+	</insert>
+	<select id="listboard" parameterType="int" resultType="kh.nt.pass.model.ServiceBoard">
+		select no, title, id, content, create_date, viewcount from(select rownum as rnum, no, title, id, content, create_date, viewcount from
+	 	(select * from serviceboard order by no asc)) where 
+	 	((select Count(*) from serviceboard)-((#{page}-1)*10)) >= rnum and rnum > ((select Count(*) from serviceboard)-(#{page}*10)) order by rnum desc
+	</select>
+	<select id="homepage" resultType="int">
+		select CEIL(Count(*)/10) from serviceboard
+	</select>
+	<select id="viewboard" parameterType="int" resultType="kh.nt.pass.model.ServiceBoard">
+		select * from serviceboard where no=#{no}
+	</select>
+	<select id="viewfile" parameterType="int" resultType="kh.nt.pass.model.ServiceFile">
+		select * from servicefile where service_no=#{service_no}	
+	</select>
+	<update id="viewcountadd" parameterType="int">
+	 	update serviceboard set viewcount=viewcount+1 where no=#{no}
+	 </update>
+	<update id="editboard" parameterType="kh.nt.pass.model.ServiceBoard">
+		update serviceboard set title=#{title}, content=#{content} where id=#{id} and no=#{no}
+	</update>
+	<delete id="deleteboard" parameterType="int">
+		delete from serviceboard where no=#{no}
+	</delete>
+	<select id="downfile" parameterType="kh.nt.pass.model.ServiceFile" resultType="kh.nt.pass.model.ServiceFile">
+		select * from servicefile where uuid=#{uuid} and name=#{name} 
+	</select>
+	<insert id="createreply" parameterType="kh.nt.pass.model.ServiceReply" >
+		insert into servicereply values(#{uuid},#{service_no},#{id},#{content},default)
+	</insert>
+	<select id="listreply" parameterType="int" resultType="kh.nt.pass.model.ServiceReply">
+		select uuid, service_no, id, content, create_date from(select rownum as rnum, uuid, service_no, id, content, create_date from(select * from servicereply order by service_no asc)) where ((select Count(*) from servicereply)-((#{page}-1)*10)) >= rnum and rnum > ((select Count(*) from servicereply)-(#{page}*10)) order by rnum desc
+	</select>
+	<select id="viewreply" parameterType="hashmap" resultType="kh.nt.pass.model.ServiceReply">
+		select * from servicereply where service_no=#{no}	
+	</select>
+	<select id="replypage" resultType="int">
+		select CEIL(count(*)/10) from servicereply
+	</select>
+	<update id="editreply" parameterType="kh.nt.pass.model.ServiceReply">
+		update servicereply set content=#{content} where uuid =#{uuid}
+	</update>
+	<delete id="deletereply" parameterType="kh.nt.pass.model.ServiceReply">
+		delete from servicereply where uuid =#{uuid}
+	</delete>
 </mapper>

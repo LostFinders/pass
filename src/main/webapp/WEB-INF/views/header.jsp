@@ -74,7 +74,7 @@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
           <li><a class="nav-link scrollto" href="/pass/pass/request">수거신청</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">사이트 소개</a></li>
           <li><a class="nav-link scrollto" href="#team">개발자 소개</a></li>
-          <li><a class="nav-none-line" href="/pass/service/board">고객센터</a></li>
+          <li><a class="nav-none-line" href="/pass/service/board?page=1">고객센터</a></li>
 
          <!--   <li><a class="nav-none-line" href="/pass/member/login">로그인</a></li> -->
         </ul><c:choose><c:when test="${signin == null}"><a class="btn ms-md-2" role="button" href="/pass/member/login">로그인</a></c:when><c:otherwise><a class="btn ms-md-2" role="button" href="/pass/member/login">로그아웃</a></c:otherwise></c:choose>
